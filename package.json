@@ -1,0 +1,26 @@
+{
+  "name": "couchapp-seed",
+  "version": "1.0.0",
+  "description": "CouchDB hosted app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fingerskier/couchapp-seed.git"
+  },
+  "keywords": [
+    "couchdb",
+    "couchapp",
+    "html",
+    "html5",
+    "jquery"
+  ],
+  "author": "fingerskier",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fingerskier/couchapp-seed/issues"
+  },
+  "homepage": "https://github.com/fingerskier/couchapp-seed#readme"
+}

@@ -1,0 +1,15 @@
+{
+  "env": {
+    "dev": {
+      "db": "http://localhost:5984/seed"
+      ,
+      "name": "app"
+    },
+    "test": {
+      "db": "http://localhost:5984/seed"
+    },
+    "prod": {
+      "db": "http://localhost:5984/seed"
+    }
+  }
+}
