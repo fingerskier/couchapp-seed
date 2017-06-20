@@ -1,7 +1,7 @@
 {
   "env": {
     "dev": {
-      "db": "http://localhost:5984/seed"
+      "db": "http://PCS:PCS@localhost:5984/seed"
       ,
       "name": "app"
     },

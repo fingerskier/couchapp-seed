@@ -1,16 +1,4 @@
 var User = {
-    list: []
-    ,
-    loadList(){
-        return m.request({
-            method: "GET",
-            url: `${DB}/users`
-        })
-        .then(function(result) {
-            User.list = result.them
-        })
-    }
-    ,
     createList(){
         m.request({
             method: "POST"
@@ -29,5 +17,43 @@ var User = {
         })
         .then(console.info)
         .catch(console.error)
+    }
+    ,
+    current: {}
+    ,
+    list: []
+    ,
+    load(soughtID){
+        return m.request({
+            method: "GET",
+            url: `${DB}/users`,
+            withCredentials: true
+        })
+        .then(function(result) {
+            User.list.filter((element,index)=>{
+                if (element.id == soughtID) User.current = User.list[index]
+            })
+        })
+    }
+    ,
+    loadList(){
+        return m.request({
+            method: "GET",
+            url: `${DB}/users`,
+            withCredentials: true
+        })
+        .then(function(result) {
+            User.list = result.them
+        })
+    }
+    ,
+    save(){
+console.log(User.current)
+        return m.request({
+            data: User.current,
+            method: "PUT",
+            url: `${DB}/users`,
+            withCredentials: true
+        })
     }
 }
